@@ -144,7 +144,7 @@ h6 {
 
 
 /*커스텀*/
-
+.bigfont { font-size: 7em; text-align: left; }
 
 /* 사이드바 */
 #sidebar { position: fixed; right: 0px; top: 50%; transform: translateY(-50%); z-index:30000; width:55px }
@@ -155,15 +155,6 @@ h6 {
 #sidebar .sideButton:hover a, #sidebar .sideButton:hover i { color: white; transition: 0.5s; }
 #sidebar a, #sidebar i { color: #832bc3; }
 #sidebar .sideButton i { font-size: 2.5em; display: inline-block; vertical-align: middle; }
-
-
-
-
-
-
-
-
-
 
 
 hr.colored { display: none; }
@@ -185,7 +176,6 @@ header .brand-name img { width: 800px; padding-bottom: 50px; }
 #ability h4 { position: absolute; top: -60px; right: -20px; color: #f1f1f1; background-color: #832bc3; padding: 5px; border-radius: 10px; }
 #ability h4::after { content: ""; display: block; position: absolute; top: 24px; left: 20px; width: 10px;
 height: 10px; transform: rotate(45deg); background-color: #832bc3; }
-.bigfont { font-size: 7em; text-align: left; }
 #abilityC { margin-top: 50px; }
 #abilityC img { width: 40%; height: auto; }
 #license { margin-left: 5px; }
@@ -302,6 +292,21 @@ footer#contact { background-color: #222; padding: 100px 0; }
 #contact .box ul { padding: 0; }
 #contact .box li { list-style: none; }
 .smallfont { font-size: 12px; color: #777; }
+footer#contact .social { margin: 50px 0 0 0; text-align: center; }
+
+
+/* 반응형제작 */
+@media (min-width: 770px) {
+footer#contact .social { display: none; }
+}
+@media (max-width: 769px) {
+#sidebar { display: none; }
+}
+
+
+
+
+
 /**/
 
 
