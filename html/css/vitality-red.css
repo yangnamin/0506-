@@ -147,13 +147,13 @@ h6 {
 
 
 /* 사이드바 */
-#sidebar { position: fixed; right: 0px; top: 50%; transform: translateY(-50%); z-index:30000; width:50px }
-#sidebar .sideButton { background-color: #666; border-radius: 100px 0 0 100px; padding: 10px;
+#sidebar { position: fixed; right: 0px; top: 50%; transform: translateY(-50%); z-index:30000; width:55px }
+#sidebar .sideButton { background-color: transparent; border: 1px solid #832bc3; padding: 10px;
   margin: 10px 0; transition: 0.5s;  width:225px; }
 #sidebar a { font-size: 1.8em; transition: 0.5s; display: inline-block; vertical-align: middle;}
 #sidebar .sideButton:hover { background-color: #832bc3; margin-left:-135px; }
-
-#sidebar a, #sidebar i { color: white; }
+#sidebar .sideButton:hover a, #sidebar .sideButton:hover i { color: white; transition: 0.5s; }
+#sidebar a, #sidebar i { color: #832bc3; }
 #sidebar .sideButton i { font-size: 2.5em; display: inline-block; vertical-align: middle; }
 
 
@@ -271,8 +271,23 @@ header { overflow: hidden;}
 
 
 /* portfolio section */
-
 #portfolio { background-color: #f1f1f1; color: #832bc3; }
+#portfolio img { width: auto; height: 100%; position: absolute; top: 0; left: 50%; transform: translateX(-50%);}
+#portfolio .col-md-4 { overflow: hidden; margin-top: 50px; height: 230px; }
+#portfolio .col-md-4 a { display: block; width: 100%; height: 100%; }
+#portfolio .portfolio-wrapper { width: 100%; height: 100%; position: relative; overflow: hidden; }
+#page-top .portfolio-modal .modal-content { background: rgba(0,0,0,0.9);}
+#page-top .device-mockup > .device { background: none;}
+.line { border-left: 1px solid white; text-align: left; display: inline-block; margin: 0 auto; margin: 20px 0 30px 0; }
+.portfolio-modal .col-md-8 >ul { padding: 0; margin: 20px 0 0 0; }
+.line ul { padding-left: 20px; margin-bottom: 0; }
+.portfolio-modal li { list-style: none; }
+.abutton a { padding: 5px 20px; background-color: white; color: #222; margin: 0 10px; }
+.portfolio-modal .device-mockup.macbook > .device > .screen { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+.portfolio-modal .owl-carousel .owl-wrapper, .owl-carousel .owl-item { width: 750px; }
+.portfolio-modal .col-md-offset-2 { margin-top: 50px; }
+
+
 
 /* footer */
 footer#contact { background-color: #222; padding: 100px 0; }
