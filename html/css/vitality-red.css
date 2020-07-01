@@ -191,7 +191,7 @@ height: 10px; transform: rotate(45deg); background-color: #832bc3; }
 
 @keyframes abAf1 {
   from { width: 0; }
-  to { width: 80%; }
+  to { width: 90%; }
 }
 @keyframes abAf2 {
   from { width: 0; }
@@ -203,7 +203,7 @@ height: 10px; transform: rotate(45deg); background-color: #832bc3; }
 }
 @keyframes abAf4 {
   from { width: 0; }
-  to { width: 75%; }
+  to { width: 80%; }
 }
 @keyframes abAf5 {
   from { width: 0; }
@@ -211,7 +211,7 @@ height: 10px; transform: rotate(45deg); background-color: #832bc3; }
 }
 @keyframes abAf6 {
   from { width: 0; }
-  to { width: 80%; }
+  to { width: 90%; }
 }
 
 
@@ -233,9 +233,8 @@ section.services { background-color: #3a3a3a; }
 
 
 /*상단메인 레이아웃*/
-header { overflow: hidden;}
+header { overflow: hidden; position: relative; width: 100%; height: 100%; }
 #hdprofile { position: absolute; left: 0px; top:60px; z-index: 10; }
-#content_div h1{ font-size: 7em; }
 #hdline { position: absolute; left: 0px; top:95px; z-index: 9; }
 #hdline h1 { color: #832bc3; }
 #hdprofile h2 { font-size: 3em; line-height: 0.7; }
@@ -252,13 +251,13 @@ header { overflow: hidden;}
 #ani_1, #ani_2 .di { animation-fill-mode: forwards; }
 #ani_1 { z-index:20; }
 #ani_2 { z-index:10; }
-#content_div { z-index:30; position: relative; height: 100%; }
+#content_div { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 .scroll-down { z-index:40; }
 .listh3 { font-size: 2em; }
 .listul { font-size: 1.3em; padding: 0; margin: 20px 0; }
 .listul li { list-style: none;}
 #hdma a { padding: 5px 20px; background-color: white; color: #222; font-size: 1.3em; font-weight: 800;}
-
+#content_div >.container { position: relative; height: 100%; }
 
 /* portfolio section */
 #portfolio { background-color: #f1f1f1; color: #832bc3; }
@@ -276,8 +275,12 @@ header { overflow: hidden;}
 .portfolio-modal .device-mockup.macbook > .device > .screen { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
 .portfolio-modal .owl-carousel .owl-wrapper, .owl-carousel .owl-item { width: 750px; }
 .portfolio-modal .col-md-offset-2 { margin-top: 50px; }
-
-
+#m_close { display: none; margin: 0 auto; }
+.portfolio-modal .owl-theme .owl-controls .owl-page span { background: rgba(255,255,255,0.5);}
+#portfolio .pf_caption { position: absolute; bottom: 0; left: 15px; right: 15px;
+  background-color:  #832bc3; cursor: pointer; height: 0px; overflow: hidden; transition: 0.5s; }
+#portfolio .pf_caption a { color: white; position: absolute; top: 0; left: 0; line-height: 50px; }
+#portfolio #portfoliolist >div:hover .pf_caption { height: 50px; }
 
 /* footer */
 footer#contact { background-color: #222; padding: 100px 0; }
@@ -298,12 +301,37 @@ footer#contact .social { margin: 50px 0 0 0; text-align: center; }
 /* 반응형제작 */
 @media (min-width: 770px) {
 footer#contact .social { display: none; }
+
 }
+
 @media (max-width: 769px) {
-#sidebar { display: none; }
+#sidebar, #sub_1 { display: none; }
+#sub_2 { left: 0; top: 60%; }
+#prof { right: 0; bottom: 0; max-width: 700px; max-height: 700px;}
+.listul { font-size: 1em; padding: 0; margin: 20px 0; }
+.portfolio-modal #m_close { display: block; }
+
 }
 
+@media (max-width: 481px) {
+.di,.di2,.di3 { display: none; }
+#prof { position: absolute; right: 0; bottom: 0; max-width: 350px; max-height: 350px;}
+#sub_2 strong { font-size: 1em; }
+.bigfont { font-size: 2.5em; }
+#hdprofile h2 { font-size: 1.7em; }
+header #hdprofile { top: 40px; left: 10px; }
+header #hdline { top: 50px; left: 10px; }
+header #hdma { margin-top: 30px; }
+header #sub_2 { top: 55%; left: 10px; }
+header .scroll-down { display: none; }
+header #hdprofile h2 { line-height: 0.4em; }
+header .listul { font-size: 14px; }
+header #hdma a { font-size: 1em; }
+header #sub_2 strong { font-size: 2em; }
+#ani_1 { display: none; }
 
+
+}
 
 
 
